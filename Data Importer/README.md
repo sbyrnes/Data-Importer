@@ -33,15 +33,15 @@ Let's say you want to import this into a table with the following definition:
 	
 You would create a mapping file of the following form:
 
-<?xml version="1.0" encoding="utf-8"?>
-<schema-mapping outputTableName="transactionTable" 
-				databaseUrl="jdbc:mysql://localhost:3306/yourDatabaseName" 
-				databaseUserName="dbUserName" 
-				databasePassword="dbPassword">
-	<field inputFieldName="Date" outputFieldName="date" fieldType="string"/>
-	<field inputFieldName="Transaction Amount" outputFieldName="transactionAmount" fieldType="float"/>
-	<field inputFieldName="Description" outputFieldName="description" fieldType="string"/>
-</schema-mapping>
+	<?xml version="1.0" encoding="utf-8"?>
+	<schema-mapping outputTableName="transactionTable" 
+					databaseUrl="jdbc:mysql://localhost:3306/yourDatabaseName" 
+					databaseUserName="dbUserName" 
+					databasePassword="dbPassword">
+		<field inputFieldName="Date" outputFieldName="date" fieldType="string"/>
+		<field inputFieldName="Transaction Amount" outputFieldName="transactionAmount" fieldType="float"/>
+		<field inputFieldName="Description" outputFieldName="description" fieldType="string"/>
+	</schema-mapping>
 
 Note that the databaseUrl, databaseUserName and databasePassword should be specific to your database. It is assumed that the driver for your database is already in the classpath. If not, add it to the -cp argument when executing. 
 
